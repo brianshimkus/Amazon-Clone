@@ -408,6 +408,11 @@
   "resolved" "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.2.0.tgz"
   "version" "9.2.0"
 
+"@heroicons/react@^2.0.12":
+  "integrity" "sha512-FZxKh3i9aKIDxyALTgIpSF2t6V6/eZfF5mRu41QlwkX3Oxzecdm1u6dpft6PQGxIBwO7TKYWaMAYYL8mp/EaOg=="
+  "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-2.0.12.tgz"
+  "version" "2.0.12"
+
 "@next/env@10.2.0":
   "integrity" "sha512-tsWBsn1Rb6hXRaHc/pWMCpZ4Ipkf3OCbZ54ef5ukgIyEvzzGdGFXQshPP2AF7yb+8yMpunWs7vOMZW3e8oPF6A=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-10.2.0.tgz"
