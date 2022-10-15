@@ -1,5 +1,8 @@
 import Image from 'next/image'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import {
+	MagnifyingGlassIcon,
+	ShoppingCartIcon,
+} from '@heroicons/react/24/outline'
 
 export default function Header() {
 	return (
@@ -22,6 +25,24 @@ export default function Header() {
 						type='text'
 					/>
 					<MagnifyingGlassIcon className='h-12 p-4' />
+				</div>
+
+				{/* Right */}
+				<div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
+					<div className='cursor-pointer'>
+						<p>Hello User</p>
+						<p>Account &amp; Lists</p>
+					</div>
+
+					<div className='cursor-pointer'>
+						<p>Returns</p>
+						<p>&amp; Orders</p>
+					</div>
+
+					<div className='cursor-pointer'>
+						<ShoppingCartIcon className='h-10' />
+						<p>Basket</p>
+					</div>
 				</div>
 			</div>
 
