@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import {
+	InformationCircleIcon,
 	MagnifyingGlassIcon,
 	ShoppingCartIcon,
 } from '@heroicons/react/24/outline'
@@ -52,7 +53,20 @@ export default function Header() {
 			</div>
 
 			{/* Bottom Nav */}
-			<div></div>
+			<div className='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm'>
+				<p className='link flex items-center'>
+					<InformationCircleIcon className='h-6 mr-1' /> All
+				</p>
+				<p className='link'>Prime Video</p>
+				<p className='link'>Amazon Business</p>
+				<p className='link'>Today's Deals</p>
+				<p className='link hidden lg:inline-flex'>Electronics</p>
+				<p className='link hidden lg:inline-flex'>Food &amp; Grocery</p>
+				<p className='link hidden lg:inline-flex'>Prime</p>
+				<p className='link hidden lg:inline-flex'>Buy Again</p>
+				<p className='link hidden lg:inline-flex'>Shopper Toolkit</p>
+				<p className='link hidden lg:inline-flex'>Health &amp; Personal Care</p>
+			</div>
 		</header>
 	)
 }
