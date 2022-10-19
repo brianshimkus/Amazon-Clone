@@ -32,6 +32,7 @@ export default function Product({
 			description,
 			category,
 			image,
+			hasPrime,
 		}
 
 		dispatch(addToBasket(product))
