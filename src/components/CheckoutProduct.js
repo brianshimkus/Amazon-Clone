@@ -1,6 +1,8 @@
 import { StarIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import Currency from 'react-currency-formatter'
+import { useDispatch } from 'react-redux'
+import { addToBasket, removeFromBasket } from '../slices/basketSlice'
 
 export default function CheckoutProduct({
 	id,
@@ -12,6 +14,21 @@ export default function CheckoutProduct({
 	image,
 	hasPrime,
 }) {
+	const dispatch = useDispatch()
+
+	const addItemToBasket = () => {
+		const product = {
+			id,
+			title,
+			price,
+			description,
+			category,
+			image,
+			hasPrime,
+		}
+		dispatch(addToBasket(product))
+	}
+
 	return (
 		<div className='grid grid-cols-5'>
 			<Image src={image} height={200} width={200} objectFit='contain' />
@@ -42,8 +59,10 @@ export default function CheckoutProduct({
 			</div>
 
 			<div className='flex flex-col space-y-2 my-auto justify-self-end'>
-				<button className='button'>Add to Basket</button>
-				<button className='button'>Remove from Basket</button>
+				<button className='button' onClick={addItemToBasket}>
+					Add another to cart
+				</button>
+				<button className='button'>Remove from cart</button>
 			</div>
 		</div>
 	)

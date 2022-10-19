@@ -67,7 +67,7 @@ export default function Product({
 			)}
 
 			<button onClick={addItemToBasket} className='mt-auto button'>
-				Add to Basket
+				Add to cart
 			</button>
 		</div>
 	)
