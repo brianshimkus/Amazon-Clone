@@ -29,6 +29,10 @@ export default function CheckoutProduct({
 		dispatch(addToBasket(product))
 	}
 
+	const removeItemFromBasket = () => {
+		dispatch(removeFromBasket({ id }))
+	}
+
 	return (
 		<div className='grid grid-cols-5'>
 			<Image src={image} height={200} width={200} objectFit='contain' />
@@ -62,7 +66,9 @@ export default function CheckoutProduct({
 				<button className='button' onClick={addItemToBasket}>
 					Add another to cart
 				</button>
-				<button className='button'>Remove from cart</button>
+				<button className='button' onClick={removeItemFromBasket}>
+					Remove from cart
+				</button>
 			</div>
 		</div>
 	)
