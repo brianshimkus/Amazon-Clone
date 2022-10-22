@@ -9,6 +9,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.12",
     "@reduxjs/toolkit": "^1.8.6",
+    "@stripe/stripe-js": "^1.42.0",
     "@tailwindcss/line-clamp": "^0.2.0",
     "firebase": "^8.10.1",
     "firebase-admin": "^11.2.0",
