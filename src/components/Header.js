@@ -15,8 +15,8 @@ export default function Header() {
 	const items = useSelector(selectItems)
 
 	return (
-		<header>
-			<div className='flex items-center bg-amazon_blue p-1 flex-grow py-2'>
+		<header className='sticky top-0 z-50'>
+			<div className='relative flex items-center bg-amazon_blue p-1 flex-grow py-2'>
 				<div className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
 					<Image
 						onClick={() => router.push('/')}
@@ -63,7 +63,7 @@ export default function Header() {
 				</div>
 			</div>
 
-			<div className='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm'>
+			{/* <div className='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm'>
 				<p className='link flex items-center'>
 					<InformationCircleIcon className='h-6 mr-1' /> All
 				</p>
@@ -76,7 +76,7 @@ export default function Header() {
 				<p className='link hidden lg:inline-flex'>Buy Again</p>
 				<p className='link hidden lg:inline-flex'>Shopper Toolkit</p>
 				<p className='link hidden lg:inline-flex'>Health &amp; Personal Care</p>
-			</div>
+			</div> */}
 		</header>
 	)
 }
