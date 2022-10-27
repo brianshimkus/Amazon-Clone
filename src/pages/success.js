@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { useRouter } from 'next/router'
-import Header from '../components/header'
+import Header from '../components/Header'
 
 export default function SuccessPage() {
 	const router = useRouter()
