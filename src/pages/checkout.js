@@ -9,7 +9,7 @@ import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 const stripePromise = loadStripe(process.env.stripe_public_key)
 
-export default function Checkout() {
+export default function CheckoutPage() {
 	const items = useSelector(selectItems)
 	const total = useSelector(selectTotal)
 	const { data: session } = useSession()
