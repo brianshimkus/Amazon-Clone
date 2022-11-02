@@ -49,11 +49,15 @@ export async function getServerSideProps(context) {
 		}
 	}
 
-	const stripeOrders = await stripe.orders.list({
-		customer: session.user.email,
-		limit: 100,
-	})
+	// Firebase DB
+	const stripeOrders = await db
+		.collection('users')
+		.doc(session.user.email)
+		.collection('orders')
+		.orderBy('timestamp', 'desc')
+		.get()
 
+	// Stripe orders
 	const orders = await Promise.all(
 		stripeOrders.data.map(async (order) => ({
 			id: order.id,
