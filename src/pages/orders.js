@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 import Header from '../components/Header'
 
 export default function OrdersPage({ orders }) {
@@ -41,7 +41,7 @@ export default function OrdersPage({ orders }) {
 export async function getServerSideProps(context) {
 	const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
-	const session = getSession(context)
+	const session = await getSession(context)
 
 	if (!session) {
 		return {
@@ -78,4 +78,10 @@ export async function getServerSideProps(context) {
 			).data,
 		}))
 	)
+
+	return {
+		props: {
+			orders,
+		},
+	}
 }
